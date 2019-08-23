@@ -50,12 +50,13 @@ function roll_character_ability_scores() {
     for (let i = 0; i < 6; i++) {
         let rolls = roll('4d6');
         result.natural.push(rolls.total - rolls.min);
+        result.average += result.natural[i];
     }
 
     //process results
     result.sorted = result.natural.slice().sort((a, b) => b - a);
     result.min = result.sorted[result.sorted.length - 1];
     result.max = result.sorted[0];
-    result.average = result.sorted.reduce((a, b) => a += b)/6;
+    result.average /= 6;
     return result;
 }
