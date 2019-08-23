@@ -59,5 +59,3 @@ function roll_character_ability_scores() {
     result.average = result.sorted.reduce((a, b) => a += b)/6;
     return result;
 }
-
-console.log(roll_character_ability_scores())
