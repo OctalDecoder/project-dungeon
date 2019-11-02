@@ -60,3 +60,9 @@ function roll_character_ability_scores() {
     result.average /= 6;
     return result;
 }
+
+module.exports = {
+    roll_character_ability_scores: roll_character_ability_scores,
+    roll: roll,
+    DICE_REGEX: DICE_REGEX
+}
